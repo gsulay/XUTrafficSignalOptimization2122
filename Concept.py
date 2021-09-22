@@ -24,3 +24,5 @@ if q1_time >0 or q2_time > 0:
         q2 = 'G'
 
 elif q1_time>0 and q2>0
+
+GIFEREY HEHEHEHEHHE

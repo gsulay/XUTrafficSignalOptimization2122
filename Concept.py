@@ -26,3 +26,4 @@ if q1_time >0 or q2_time > 0:
 elif q1_time>0 and q2>0
 
 GIFEREY HUHUHUHUHU
+#sir, biry noice

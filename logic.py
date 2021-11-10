@@ -2,47 +2,30 @@ import numpy as np
 import random as rd
 import pandas as pd
 
-def when_depart(initial, final, demand):
-    """
-    Returns list of when each vehicle departs in seconds
-    """
-    #converts time boundaries to seconds to seconds
-    initial_s = initial*60
-    final_s = final*60
-
-    #checks if there is demand
-    if demand != 0:
-        #converts from vehicle/given minutes to seconds/vehicle
-        demand = (final-initial)*60/demand
-        vehicles_time_index = np.arange(initial_s, final_s, step = demand)
-        return vehicles_time_index
-    else:
-        #if there is no demand, return nothing
-        pass
 
 def to_route(beginning,possible_route):
     """ 
     Returns end route depending on probability dictionary similar below
     
-    possible_route = {
-    
-    "North":{
-        "South": 40, 
-        "East": 60
-        },
-    "South":{
-        "North": 75, 
-        "West": 25
-        },
-    "East":{
-        "West": 70,
-        "North": 30
-        },
-    "West":{
-        "East": 55,
-        "South": 45
+        possible_route = {
+        
+        "North":{
+            "South": 40, 
+            "East": 60
+            },
+        "South":{
+            "North": 75, 
+            "West": 25
+            },
+        "East":{
+            "West": 70,
+            "North": 30
+            },
+        "West":{
+            "East": 55,
+            "South": 45
+            }
         }
-}
     """
     
     direction = list(possible_route[beginning].keys())                 #creates list of keys per possible route, ex. keys of "North" is "South" and "East"
@@ -50,9 +33,9 @@ def to_route(beginning,possible_route):
     
     end = rd.choices(direction, weights=values, k=1)                   #to use rd.choices, lists must be assigned, not objects
     
-    return end
+    return end[0]
 
-def vehicles_per_time_increment_array(df):
+def single_load_time_index(df):
     """
     Converts single route dataframe into the time where each vehicle shall enter the lane
     """
@@ -86,8 +69,7 @@ def vehicles_per_time_increment_array(df):
     
     return vehicle_index[vehicle_index != np.array(None)]
 
-
-def vehicles_per_lane(df):
+def load_time_index(df):
     """
     Converts single route dataframe into the time where each vehicle shall enter the lane
     """
@@ -95,6 +77,6 @@ def vehicles_per_lane(df):
     
 
     for column_index in list(range(1,df.shape[1])):     #gets column index of routes assuming first column is time and the rest are routes
-        vehicle_time_index_per_lane[df.columns.values[column_index]] = vehicles_per_time_increment_array(df.iloc[:,[0, column_index]]).astype('float32')
+        vehicle_time_index_per_lane[df.columns.values[column_index]] = single_load_time_index(df.iloc[:,[0, column_index]]).astype('float32')
     
     return vehicle_time_index_per_lane

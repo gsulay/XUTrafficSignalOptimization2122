@@ -30,7 +30,6 @@ def to_route(beginning,possible_route):
     
     direction = list(possible_route[beginning].keys())                 #creates list of keys per possible route, ex. keys of "North" is "South" and "East"
     values = list(possible_route[beginning].values())                  #creates list of values per possible route, ex. values of "North" is 40 and 60
-    
     end = rd.choices(direction, weights=values, k=1)                   #to use rd.choices, lists must be assigned, not objects
     
     return end[0]
@@ -40,7 +39,7 @@ def single_load_time_index(df):
     Converts single route dataframe into the time where each vehicle shall enter the lane
     """
 
-    def when_depart(initial, final, demand):
+    def when_depart(initial, final, demand):    #initial and final in minutes
         """
         Returns list of when each vehicle departs in seconds
         """
@@ -75,7 +74,6 @@ def load_time_index(df):
     """
     vehicle_time_index_per_lane = {}
     
-
     for column_index in list(range(1,df.shape[1])):     #gets column index of routes assuming first column is time and the rest are routes
         vehicle_time_index_per_lane[df.columns.values[column_index]] = single_load_time_index(df.iloc[:,[0, column_index]]).astype('float32')
     

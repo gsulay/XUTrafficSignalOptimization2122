@@ -82,25 +82,34 @@ guiShape="passenger"/>
 def run():
     """execute the TraCI control loop"""
     step = 0
+    vehicle_count = []
     # we start with phase 2 where EW has green
     traci.trafficlight.setPhase("0", 2)
-    traci.trafficlight.setPhaseDuration("0", 10)
     while traci.simulation.getMinExpectedNumber() > 0:
         traci.simulationStep()
+        vehicle_count.append(lambda x: traci.inductionloop.getLastStepVehicleNumber("0") if traci.inductionloop.getLastStepVehicleNumber("0") >0 )
         if traci.trafficlight.getPhase("0") == 2:
             # we are not already switching
             if traci.inductionloop.getLastStepVehicleNumber("0") > 0:
+                
                 # there is a vehicle from the north, switch
                 traci.trafficlight.setPhase("0", 3)
-                traci.trafficlight.setPhaseDuration("0", 10)
                 
             else:
                 # otherwise try to keep green for EW
                 traci.trafficlight.setPhase("0", 2)
-                traci.trafficlight.setPhaseDuration("0", 10)
+
         step += 1
+    
+    
+    with open("test.csv","w") as csvfile:
+        for i in vehicle_count:
+            csvfile.write(str(i) + "\n")
+    
     traci.close()
     sys.stdout.flush()
+    
+    
 
 
 def get_options():
@@ -130,3 +139,5 @@ if __name__ == "__main__":
     traci.start([sumoBinary, "-c", "data/cross.sumocfg",
                              "--tripinfo-output", "tripinfo.xml"])
     run()
+    
+    

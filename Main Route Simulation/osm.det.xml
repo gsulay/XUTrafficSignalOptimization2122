@@ -1,0 +1,21 @@
+<additional>
+  <laneAreaDetector id="N_0" lane="785902529_0" pos="-31" endPos="-1" friendlyPos="False" freq="60" file="out.xml"/>
+  <laneAreaDetector id="N_1" lane="785902529_1" pos="-31" endPos="-1" friendlyPos="False" freq="60" file="out.xml"/>
+  <laneAreaDetector id="W_0" lane="785902540#0_0" pos="-31" endPos="-1" friendlyPos="False" freq="60" file="out.xml"/>
+  <laneAreaDetector id="W_1" lane="785902540#0_1" pos="-31" endPos="-1" friendlyPos="False" freq="60" file="out.xml"/>
+  <laneAreaDetector id="S_0" lane="-732022517_0" pos="-31" endPos="-1" friendlyPos="False" freq="60" file="out.xml"/>
+  <laneAreaDetector id="S_1" lane="-732022517_1" pos="-31" endPos="-1" friendlyPos="False" freq="60" file="out.xml"/>
+  <laneAreaDetector id="E_0" lane="-785902540#2_0" pos="-31" endPos="-1" friendlyPos="False" freq="60" file="out.xml"/>
+  <laneAreaDetector id="E_1" lane="-785902540#2_1" pos="-31" endPos="-1" friendlyPos="False" freq="60" file="out.xml"/>
+  ....
+  </additional>
+
+<!--reference_dict = {
+    "North_a" : "785902529",
+    "North_f" : "-785902529",
+    "West_a" : "785902540#0",
+    "West_f" : "-785902540#1",
+    "South_a" : "-732022517",
+    "South_f" : "732022517",
+    "East_a" : "-785902540#2",
+    "East_f" : "785902540#2"}-->

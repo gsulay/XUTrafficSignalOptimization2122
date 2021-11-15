@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2021-11-12 19:04:51 by Eclipse SUMO GUI Version 1.10.0
+<!-- generated on 2021-11-15 11:26:46 by Eclipse SUMO GUI Version 1.10.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="Simulation_Environment\Main%20Route%20Simulation\osm.net.xml"/>
-        <route-files value="Simulation_Environment\Main%20Route%20Simulation\osm.passenger.trips.xml"/>
-        <additional-files value="Simulation_Environment\Main%20Route%20Simulation\osm.poly.xml,Simulation_Environment\Main%20Route%20Simulation\osm.det.xml"/>
+        <net-file value="C:\Users\Lenovo\Desktop\REPO\XUTrafficSignalOptimization2122\Simulation_Environment\Main%20Route%20Simulation\osm.net.xml"/>
+        <route-files value="C:\Users\Lenovo\Desktop\REPO\XUTrafficSignalOptimization2122\Simulation_Environment\Main%20Route%20Simulation\osm.passenger.trips.xml"/>
+        <additional-files value="C:\Users\Lenovo\Desktop\REPO\XUTrafficSignalOptimization2122\Simulation_Environment\Main%20Route%20Simulation\osm.poly.xml,C:\Users\Lenovo\Desktop\REPO\XUTrafficSignalOptimization2122\Simulation_Environment\Main%20Route%20Simulation\osm.det.xml"/>
     </input>
-
-    <output>
-        <tripinfo-output value="tripinfo.xml"/>
-    </output>
 
     <processing>
         <ignore-route-errors value="true"/>
@@ -28,12 +24,8 @@
         <no-step-log value="true"/>
     </report>
 
-    <traci_server>
-        <remote-port value="61996"/>
-    </traci_server>
-
     <gui_only>
-        <gui-settings-file value="Simulation_Environment\Main%20Route%20Simulation\osm.view.xml"/>
+        <gui-settings-file value="C:\Users\Lenovo\Desktop\REPO\XUTrafficSignalOptimization2122\Simulation_Environment\Main%20Route%20Simulation\osm.view.xml"/>
     </gui_only>
 
 </configuration>

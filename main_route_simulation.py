@@ -91,7 +91,6 @@ def run():
     for detector in lanearea_det_ids:
         lane_area_data[detector] = []
 
-    #
     step = 0
     while traci.simulation.getMinExpectedNumber() > 0:
         #adds the number of vehicles in each lane area detector to lanarea_det_data

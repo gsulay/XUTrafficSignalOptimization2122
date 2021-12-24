@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2021-12-21 15:07:27 by Eclipse SUMO GUI Version 1.10.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\osm.net.xml"/>
+        <route-files value="D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\cars_SUV.xml,D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\motorcycles_scooters.xml,D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\taxi.xml,D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\buses.xml,D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\smallTrucks.xml,D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\largeTrucks.xml,D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\bicycle_tricycle.xml,D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\jeepney.xml,D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\motorela.xml"/>
+        <additional-files value="D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\osm.poly.xml,D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\osm.det.xml"/>
+    </input>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-steps value="18"/>
+        <device.rerouting.adaptation-interval value="10"/>
+    </routing>
+
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <gui_only>
+        <gui-settings-file value="D:\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Main%20Route%20Simulation\osm.view.xml"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
+</detector>

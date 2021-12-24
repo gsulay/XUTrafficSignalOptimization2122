@@ -1,7 +1,7 @@
 import numpy as np
 import random as rd
 import pandas as pd
-
+import json
 
 def to_route(beginning,possible_route):
     """ 
@@ -34,12 +34,7 @@ def to_route(beginning,possible_route):
     
     return end[0]
 
-def single_load_time_index(df):
-    """
-    Converts single route dataframe into the time where each vehicle shall enter the lane
-    """
-
-    def when_depart(initial, final, demand):    #initial and final in minutes
+def when_depart(initial, final, demand):    #initial and final in minutes
         """
         Returns list of when each vehicle departs in seconds
         """
@@ -56,6 +51,11 @@ def single_load_time_index(df):
         else:
             #if there is no demand, return nothing
             pass
+
+def single_load_time_index(df):
+    """
+    Converts single route dataframe into the time where each vehicle shall enter the lane
+    """
     
     vehicle_index = np.array([])
     for row_num in range(df.shape[0]-1):
@@ -78,3 +78,8 @@ def load_time_index(df):
         vehicle_time_index_per_lane[df.columns.values[column_index]] = single_load_time_index(df.iloc[:,[0, column_index]]).astype('float32')
     
     return vehicle_time_index_per_lane
+
+def json_loader(path):
+    with open(path,'r') as f:
+        all_data = "".join([i for i in f])
+    return json.loads(all_data)   

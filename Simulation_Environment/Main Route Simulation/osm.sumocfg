@@ -7,7 +7,7 @@
 
     <input>
         <net-file value="osm.net.xml"/>
-        <route-files value="osm.passenger.trips.xml"/>
+        <route-files value="cars_SUV.xml, motorcycles_scooters.xml, taxi.xml, buses.xml, smallTrucks.xml, largeTrucks.xml, bicycle_tricycle.xml, jeepney.xml, motorela.xml"/>
         <additional-files value="osm.poly.xml, osm.det.xml"/>
     </input>
 

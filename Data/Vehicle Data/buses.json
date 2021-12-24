@@ -1,0 +1,1 @@
+{"accel": 0.4, "decel": 2.0, "sigma": 0.5, "length": 15.0, "minGap": 2.5, "maxSpeed": 30.0, "guiShape": "bus", "color": "255,255,0", "id": "buses"}

@@ -2,6 +2,7 @@ import numpy as np
 import random as rd
 import pandas as pd
 import json
+import xml.etree.ElementTree as ET  
 
 def to_route(beginning,possible_route):
     """ 
@@ -82,4 +83,23 @@ def load_time_index(df):
 def json_loader(path):
     with open(path,'r') as f:
         all_data = "".join([i for i in f])
-    return json.loads(all_data)   
+    return json.loads(all_data)
+
+def xml_to_df(file_name):
+    
+    xml_main = ET.parse(file_name)
+    tree = xml_main.getroot()
+
+    #Creates list for the name of the attributes to be used in the dataframe
+    root = tree.find('interval')
+    attribute_list = [i for i in root.attrib.keys()]
+
+    value_list = [roots.attrib.values() for roots in tree.findall('interval')]    #list comprehension
+    #for intervals in roots.iter('interval'):
+    #    value_list.append(intervals.attrib.values())
+
+    df = pd.DataFrame(value_list)
+    for index, val in enumerate(attribute_list):
+        df = df.rename(columns={index:attribute_list[index]})
+        pd.set_option('display.max_rows', None)
+    return df

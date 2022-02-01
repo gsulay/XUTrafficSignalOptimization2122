@@ -29,6 +29,7 @@ import optparse
 from libsumo.libsumo import inductionloop
 from threading import Thread
 from pathlib import Path
+import logic as lc
 
 # we need to import python modules from the $SUMO_HOME/tools directory
 if 'SUMO_HOME' in os.environ:
@@ -48,18 +49,6 @@ def json_loader(path):
 
 def run():
     """executes the TraCI control loop"""
-    step = 0
-
-    #initializes the dictionary for each lane area detector to sotore data
-    lanearea_det_ids = traci.lanearea.getIDList()
-    lane_area_data = {}
-    for sensor in lanearea_det_ids:
-        lane_area_data[sensor] = np.array([])
-
-    inductionloop_ids = traci.inductionloop.getIDList()
-    inductionloop_data = {}
-    for sensor in inductionloop_ids:
-        inductionloop_data[sensor]=np.array([])
 
     #initialize base values 
     step = 0
@@ -68,46 +57,16 @@ def run():
     phase_index=0
     lanearea_phasing = json_loader(Path('Data\lanearea_detector_phasing.json'))
     intersection_id = 4889475255
-    
-    #function to read instantaneous lane area data
-    def lanearea_read_data():
-        for detector in lanearea_det_ids:
-            measure = traci.lanearea.getLastStepVehicleNumber(detector)
-            lane_area_data[detector] = np.append(lane_area_data[detector],np.array([measure],dtype='float16'))
+    max_green_time=60
 
-    #function to read instantaneous induction loop data
-    def inductionloop_read_data():
-         for sensor in inductionloop_ids:
-            measure = traci.inductionloop.getLastStepVehicleNumber(sensor)
-            inductionloop_data[sensor] = np.append(inductionloop_data[sensor],np.array([measure],dtype='float16'))
-
-    #environment for the        
     while traci.simulation.getMinExpectedNumber() > 0:
-        #initializes threads list
-        threads = []
-        
-        #creates a thread that adds the number of vehicles in each lane area detector 
-        #to lanarea_det_data and induction loop data to inductionloop_data
-        threads[0] = Thread(target=lanearea_read_data, args=())
-        threads[0].start()
-        threads[1] = Thread(target=inductionloop_read_data, args=())
-        threads[1].start()
-
-        for thread in threads:
-            thread.join()
-        traci.simulationStep()
-        #logic for the traffic light
-        #max green time = 60s, Passage time = 3s
-        
-        traci.trafficlight.setPhase(intersection_id,0)
-        traci.simulation.step()
-        
-        step += 1
-
-    
+        continue
     traci.close()
     sys.stdout.flush()
-    
+
+    #Dars Analysis achuchu
+
+    #Gif Edit No touchy
     df = pd.DataFrame(lane_area_data)
     df['count'] = [num for num in list(range(df.shape[0]))]
     df['bin'] = pd.cut(df['count'], np.arange(0,df.shape[0],900))

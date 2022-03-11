@@ -26,7 +26,7 @@ import sys
 import pandas as pd
 import numpy as np
 import optparse
-from libsumo.libsumo import inductionloop
+import json
 from threading import Thread
 from pathlib import Path
 import logic as lc
@@ -41,6 +41,8 @@ else:
 from sumolib import checkBinary  # noqa
 import traci  # noqa
 
+
+
 def json_loader(path):
     with open(path,'r') as f:
         all_data ="".join([i for i in f])
@@ -49,8 +51,8 @@ def json_loader(path):
 
 def run():
     """executes the TraCI control loop"""
-
-    #initialize base values 
+	
+    #initialize base values
     step = 0
     current_phase_time=0
     minimum_phase_time=30
@@ -59,19 +61,40 @@ def run():
     intersection_id = 4889475255
     max_green_time=60
 
+    x_list = []
+    lanes_dict = {}
+
+    lane_IDs = traci.lanearea.getIDList()
+    for lane in lane_IDs:
+        lanes_dict[lane]=[]
+
     while traci.simulation.getMinExpectedNumber() > 0:
-        continue
+        for lane in lane_IDs:
+            lane_data = traci.lanearea.getLastStepVehicleIDs(lane)
+            lanes_dict[lane].append(lane_data)
+
+        traci.simulation.step()
+  
+
+
+    vehicle_ids=pd.DataFrame(lanes_dict)
+    vehicle_ids['Steps'] = np.arange(0,len(lanes_dict[lane_IDs[0]]),1)
+    vehicle_ids.to_csv('test.csv')
+    
+    #"North_a" : "785902529",
+    #"North_f" : "-785902529",
+    #"West_a" : "785902540#0",
+    #"West_f" : "-785902540#1",
+    #"South_a" : "-732022517",
+    #"South_f" : "732022517",
+    #"East_a" : "-785902540#2",
+    #"East_f" : "785902540#2"}-->
+
     traci.close()
     sys.stdout.flush()
+  
 
     #Dars Analysis achuchu
-
-    #Gif Edit No touchy
-    df = pd.DataFrame(lane_area_data)
-    df['count'] = [num for num in list(range(df.shape[0]))]
-    df['bin'] = pd.cut(df['count'], np.arange(0,df.shape[0],900))
-    final_df = df.groupby('bin').mean()
-    final_df.to_csv('Data\\data.csv')
 
 def get_options():
     optParser = optparse.OptionParser()

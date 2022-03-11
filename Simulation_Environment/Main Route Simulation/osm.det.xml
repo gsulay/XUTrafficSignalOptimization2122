@@ -1,13 +1,13 @@
 <additional>
   <!--Area Detectors-->
-  <laneAreaDetector id="N_0" lane="785902529_0" pos="-51" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
-  <laneAreaDetector id="N_1" lane="785902529_1" pos="-51" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
-  <laneAreaDetector id="W_0" lane="785902540#0_0" pos="-51" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
-  <laneAreaDetector id="W_1" lane="785902540#0_1" pos="-51" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
-  <laneAreaDetector id="S_0" lane="-732022517_0" pos="-51" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
-  <laneAreaDetector id="S_1" lane="-732022517_1" pos="-51" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
-  <laneAreaDetector id="E_0" lane="-785902540#2_0" pos="-51" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
-  <laneAreaDetector id="E_1" lane="-785902540#2_1" pos="-51" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="N_0" lane="785902529_0" pos="-71" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="N_1" lane="785902529_1" pos="-71" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="W_0" lane="785902540#0_0" pos="-71" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="W_1" lane="785902540#0_1" pos="-71" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="S_0" lane="-732022517_0" pos="-71" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="S_1" lane="-732022517_1" pos="-71" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="E_0" lane="-785902540#2_0" pos="-71" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="E_1" lane="-785902540#2_1" pos="-71" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
   
   <!--Approach Detectors-->
   <inductionLoop id="aN_0" lane="785902529_0" pos="-70" freq="900" file="Output\\E1a_out.xml"/>

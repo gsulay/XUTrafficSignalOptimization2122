@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.57 93a4d346">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2021-11-09T02:32:30Z"/>
+
+  <node id="282309145" lat="8.4790771" lon="124.6445451">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="1024734828" lat="8.4788310" lon="124.6453839"/>
+  <node id="1024735088" lat="8.4799581" lon="124.6416809"/>
+  <node id="1024735186" lat="8.4794226" lon="124.6434050"/>
+  <node id="1024735268" lat="8.4777070" lon="124.6483953"/>
+  <node id="1024735518" lat="8.4793152" lon="124.6437753"/>
+  <node id="1448840617" lat="8.4783142" lon="124.6462266">
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="addr:street" v="Corrales Avenue"/>
+    <tag k="name" v="Cyclemart"/>
+    <tag k="shop" v="bicycle"/>
+    <tag k="source" v="local_knowledge"/>
+  </node>
+  <node id="1549880655" lat="8.4779605" lon="124.6478963"/>
+  <node id="1887614584" lat="8.4774540" lon="124.6493032"/>
+  <node id="1929862087" lat="8.4800301" lon="124.6414360"/>
+  <node id="1982686291" lat="8.4784142" lon="124.6463240"/>
+  <node id="1982686298" lat="8.4784373" lon="124.6462773"/>
+  <node id="1982686324" lat="8.4780593" lon="124.6461757"/>
+  <node id="1982686326" lat="8.4781669" lon="124.6460198"/>
+  <node id="1982687538" lat="8.4787613" lon="124.6461165"/>
+  <node id="1982687541" lat="8.4787698" lon="124.6457177"/>
+  <node id="1982687544" lat="8.4788523" lon="124.6459170"/>
+  <node id="1982687547" lat="8.4787949" lon="124.6458902"/>
+  <node id="1982687550" lat="8.4786910" lon="124.6460507"/>
+  <node id="2004065394" lat="8.4777122" lon="124.6461458"/>
+  <node id="3796308257" lat="8.4785687" lon="124.6459731"/>
+  <node id="3796308259" lat="8.4781751" lon="124.6460165"/>
+  <node id="3796308260" lat="8.4783551" lon="124.6457800"/>
+  <node id="4212344293" lat="8.4782313" lon="124.6464315">
+    <tag k="addr:city" v="Cagayan de Oro"/>
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="name" v="Cecil's Snack Inn &amp; Bakeshoppe"/>
+    <tag k="shop" v="bakery"/>
+  </node>
+  <node id="4212344294" lat="8.4781228" lon="124.6462015">
+    <tag k="addr:city" v="Cagayan de Oro"/>
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="amenity" v="restaurant"/>
+    <tag k="name" v="Instanbul Grill"/>
+  </node>
+  <node id="4889475248" lat="8.4772865" lon="124.6460692"/>
+  <node id="4889475251" lat="8.4792358" lon="124.6469116">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="4889475253" lat="8.4795450" lon="124.6430002"/>
+  <node id="4889475255" lat="8.4785262" lon="124.6464414">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="4889475256" lat="8.4780504" lon="124.6462575"/>
+  <node id="4893099246" lat="8.4785848" lon="124.6426788"/>
+  <node id="4897210237" lat="8.4779249" lon="124.6435731"/>
+  <node id="4899297004" lat="8.4779846" lon="124.6460812"/>
+  <node id="4899297005" lat="8.4780631" lon="124.6461191"/>
+  <node id="4899297006" lat="8.4781869" lon="124.6459570"/>
+  <node id="4899297007" lat="8.4780719" lon="124.6458920"/>
+  <node id="4899297008" lat="8.4786493" lon="124.6474299"/>
+  <node id="4899297009" lat="8.4788326" lon="124.6475235"/>
+  <node id="4899297010" lat="8.4789898" lon="124.6472087"/>
+  <node id="4899297011" lat="8.4790136" lon="124.6472124"/>
+  <node id="4899297012" lat="8.4790988" lon="124.6470418"/>
+  <node id="4899297013" lat="8.4788950" lon="124.6469378"/>
+  <node id="4899301928" lat="8.4790349" lon="124.6470092"/>
+  <node id="4899301929" lat="8.4790736" lon="124.6469572"/>
+  <node id="4899301930" lat="8.4791209" lon="124.6469883"/>
+  <node id="4899301931" lat="8.4791648" lon="124.6468961"/>
+  <node id="4899301932" lat="8.4789155" lon="124.6467517"/>
+  <node id="4899301933" lat="8.4788792" lon="124.6468339"/>
+  <node id="4899301934" lat="8.4790330" lon="124.6469228"/>
+  <node id="4899301935" lat="8.4790105" lon="124.6469639"/>
+  <node id="4899344062" lat="8.4783922" lon="124.6470524"/>
+  <node id="4899344063" lat="8.4786141" lon="124.6471784"/>
+  <node id="4899344064" lat="8.4786990" lon="124.6470150"/>
+  <node id="4899344065" lat="8.4784621" lon="124.6469084"/>
+  <node id="4899344073" lat="8.4784796" lon="124.6468700"/>
+  <node id="4899344074" lat="8.4787041" lon="124.6469645"/>
+  <node id="4899344075" lat="8.4787479" lon="124.6468581"/>
+  <node id="4899344076" lat="8.4785514" lon="124.6467753"/>
+  <node id="4899344077" lat="8.4785401" lon="124.6468027"/>
+  <node id="4899344078" lat="8.4785122" lon="124.6467909"/>
+  <node id="4919964203" lat="8.4782418" lon="124.6472212"/>
+  <node id="4919964204" lat="8.4783644" lon="124.6468918"/>
+  <node id="4919964205" lat="8.4776814" lon="124.6484841"/>
+  <node id="4919964206" lat="8.4776318" lon="124.6486604"/>
+  <node id="4919964211" lat="8.4797717" lon="124.6455820"/>
+  <node id="4919964214" lat="8.4797090" lon="124.6457147"/>
+  <node id="5222569311" lat="8.4780832" lon="124.6464295"/>
+  <node id="5222569312" lat="8.4782411" lon="124.6465282"/>
+  <node id="5222569313" lat="8.4783314" lon="124.6464142"/>
+  <node id="5222569314" lat="8.4781620" lon="124.6463177"/>
+  <node id="5222569315" lat="8.4784586" lon="124.6458520"/>
+  <node id="5222569316" lat="8.4786392" lon="124.6462463"/>
+  <node id="5222569317" lat="8.4787895" lon="124.6463368"/>
+  <node id="5222569318" lat="8.4787412" lon="124.6464140"/>
+  <node id="5222569319" lat="8.4786467" lon="124.6463535"/>
+  <node id="5222569320" lat="8.4786477" lon="124.6463729"/>
+  <node id="5222569321" lat="8.4786749" lon="124.6463917"/>
+  <node id="5222569322" lat="8.4786573" lon="124.6464181"/>
+  <node id="5222569323" lat="8.4786120" lon="124.6463901"/>
+  <node id="5222569324" lat="8.4786040" lon="124.6463449"/>
+  <node id="5222569325" lat="8.4787340" lon="124.6462977"/>
+  <node id="5222569326" lat="8.4788140" lon="124.6462224"/>
+  <node id="5222569327" lat="8.4789468" lon="124.6463705"/>
+  <node id="5222569328" lat="8.4789246" lon="124.6463928"/>
+  <node id="5222569329" lat="8.4788493" lon="124.6463421"/>
+  <node id="5222569330" lat="8.4788340" lon="124.6463580"/>
+  <node id="5222581366" lat="8.4781413" lon="124.6471996"/>
+  <node id="5222581367" lat="8.4781066" lon="124.6471716"/>
+  <node id="5222581369" lat="8.4780206" lon="124.6471020"/>
+  <node id="5222581370" lat="8.4778579" lon="124.6469704"/>
+  <node id="5222581371" lat="8.4781480" lon="124.6472050"/>
+  <node id="5222581372" lat="8.4783631" lon="124.6465839"/>
+  <node id="5222581373" lat="8.4782493" lon="124.6465166"/>
+  <node id="5222581374" lat="8.4782198" lon="124.6465198"/>
+  <node id="5300836112" lat="8.4791052" lon="124.6465280"/>
+  <node id="5300836113" lat="8.4788028" lon="124.6463510"/>
+  <node id="5300836114" lat="8.4787128" lon="124.6465082"/>
+  <node id="5300836115" lat="8.4790152" lon="124.6466853"/>
+  <node id="5503788428" lat="8.4791548" lon="124.6428691"/>
+  <node id="5503788429" lat="8.4782246" lon="124.6425760"/>
+  <node id="5503788430" lat="8.4773528" lon="124.6459954"/>
+  <node id="5503788431" lat="8.4792225" lon="124.6468392"/>
+  <node id="5503788432" lat="8.4780608" lon="124.6431023"/>
+  <node id="5503788433" lat="8.4805470" lon="124.6433670"/>
+  <node id="5503788434" lat="8.4795402" lon="124.6430024"/>
+  <node id="5503788435" lat="8.4775373" lon="124.6451628"/>
+  <node id="5503788436" lat="8.4797413" lon="124.6456522"/>
+  <node id="5503788437" lat="8.4785711" lon="124.6464025"/>
+  <node id="5503788438" lat="8.4780796" lon="124.6462226"/>
+  <node id="5503788439" lat="8.4800528" lon="124.6447744"/>
+  <node id="5503788440" lat="8.4799517" lon="124.6431439"/>
+  <node id="6322052910" lat="8.4789229" lon="124.6467215"/>
+  <node id="6322052911" lat="8.4788724" lon="124.6468358"/>
+  <node id="6322052912" lat="8.4787321" lon="124.6467725"/>
+  <node id="6322052913" lat="8.4787826" lon="124.6466582"/>
+  <node id="6322052914" lat="8.4787886" lon="124.6466326"/>
+  <node id="6322052915" lat="8.4787144" lon="124.6465956"/>
+  <node id="6322052916" lat="8.4786972" lon="124.6466308"/>
+  <node id="6322052917" lat="8.4787713" lon="124.6466679"/>
+  <node id="6601939634" lat="8.4780148" lon="124.6464932"/>
+  <node id="6601939635" lat="8.4779789" lon="124.6465469"/>
+  <node id="6601939636" lat="8.4780402" lon="124.6465887"/>
+  <node id="6601939637" lat="8.4780761" lon="124.6465351"/>
+  <node id="6601939642" lat="8.4780393" lon="124.6466067"/>
+  <node id="6601939643" lat="8.4779889" lon="124.6466590"/>
+  <node id="6601939644" lat="8.4780469" lon="124.6467161"/>
+  <node id="6601939645" lat="8.4780973" lon="124.6466638"/>
+  <node id="6673683385" lat="8.4788473" lon="124.6467432">
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="addr:street" v="Corrales Avenue"/>
+    <tag k="name" v="Graphicz Zone"/>
+    <tag k="office" v="company"/>
+  </node>
+  <node id="6975097673" lat="8.4782812" lon="124.6463377"/>
+  <node id="6975097674" lat="8.4782735" lon="124.6465178"/>
+  <node id="6975097675" lat="8.4782492" lon="124.6465573"/>
+  <node id="6975097676" lat="8.4782152" lon="124.6465373"/>
+  <node id="6975097677" lat="8.4781095" lon="124.6463305"/>
+  <node id="6975097678" lat="8.4780064" lon="124.6464753"/>
+  <node id="6975097679" lat="8.4778889" lon="124.6464155"/>
+  <node id="6975097680" lat="8.4779796" lon="124.6462965"/>
+  <node id="6975097681" lat="8.4780078" lon="124.6462728"/>
+  <node id="6975097682" lat="8.4780447" lon="124.6462833"/>
+  <node id="6975126588" lat="8.4788145" lon="124.6458471"/>
+  <node id="6975126589" lat="8.4787697" lon="124.6458262"/>
+  <node id="7078579230" lat="8.4776582" lon="124.6485655"/>
+  <node id="7078579231" lat="8.4781695" lon="124.6473947"/>
+  <node id="7078579232" lat="8.4783055" lon="124.6470514"/>
+  <node id="7655161603" lat="8.4778789" lon="124.6461919"/>
+  <node id="7655161605" lat="8.4773731" lon="124.6460814"/>
+  <node id="8369093003" lat="8.4790565" lon="124.6469874"/>
+  <node id="8369093004" lat="8.4789889" lon="124.6469857"/>
+  <way id="187637901">
+    <nd ref="1982686326"/>
+    <nd ref="1982686324"/>
+    <nd ref="1982686291"/>
+    <nd ref="1982686298"/>
+    <nd ref="1982686326"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="187637921">
+    <nd ref="1982687541"/>
+    <nd ref="1982687550"/>
+    <nd ref="1982687538"/>
+    <nd ref="1982687544"/>
+    <nd ref="1982687547"/>
+    <nd ref="6975126588"/>
+    <nd ref="6975126589"/>
+    <nd ref="1982687541"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="376174704">
+    <nd ref="3796308257"/>
+    <nd ref="1982686298"/>
+    <nd ref="3796308259"/>
+    <nd ref="3796308260"/>
+    <nd ref="5222569315"/>
+    <nd ref="3796308257"/>
+    <tag k="addr:city" v="Cagayan de Oro"/>
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="addr:street" v="Mayor J.R Borja Street"/>
+    <tag k="amenity" v="school"/>
+    <tag k="name" v="Shekinah Glory Christian Academy"/>
+  </way>
+  <way id="497381224">
+    <nd ref="5503788430"/>
+    <nd ref="5503788435"/>
+    <nd ref="4897210237"/>
+    <nd ref="5503788432"/>
+    <nd ref="5503788429"/>
+    <nd ref="4893099246"/>
+    <nd ref="5503788428"/>
+    <nd ref="5503788434"/>
+    <nd ref="5503788440"/>
+    <nd ref="5503788433"/>
+    <nd ref="5503788439"/>
+    <nd ref="4919964211"/>
+    <nd ref="5503788436"/>
+    <nd ref="4919964214"/>
+    <nd ref="5503788431"/>
+    <nd ref="5503788437"/>
+    <nd ref="5503788438"/>
+    <nd ref="5503788430"/>
+    <tag k="landuse" v="retail"/>
+  </way>
+  <way id="498532354">
+    <nd ref="4899297004"/>
+    <nd ref="4899297005"/>
+    <nd ref="4899297006"/>
+    <nd ref="4899297007"/>
+    <nd ref="4899297004"/>
+    <tag k="addr:city" v="Cagayan de Oro"/>
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="addr:street" v="Corrales Ave."/>
+    <tag k="building" v="commercial"/>
+  </way>
+  <way id="498532355">
+    <nd ref="4899297008"/>
+    <nd ref="4899297009"/>
+    <nd ref="4899297010"/>
+    <nd ref="4899297011"/>
+    <nd ref="4899297012"/>
+    <nd ref="4899301928"/>
+    <nd ref="8369093004"/>
+    <nd ref="4899297013"/>
+    <nd ref="4899297008"/>
+    <tag k="addr:city" v="Cagayan de Oro"/>
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="addr:street" v="Yacapin Street"/>
+    <tag k="building" v="commercial"/>
+  </way>
+  <way id="498532357">
+    <nd ref="8369093003"/>
+    <nd ref="4899301929"/>
+    <nd ref="4899301930"/>
+    <nd ref="4899301931"/>
+    <nd ref="4899301932"/>
+    <nd ref="4899301933"/>
+    <nd ref="4899301934"/>
+    <nd ref="4899301935"/>
+    <nd ref="8369093003"/>
+    <tag k="addr:city" v="Cagayan de Oro"/>
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="addr:street" v="Corrales Ave."/>
+    <tag k="building" v="commercial"/>
+  </way>
+  <way id="498534323">
+    <nd ref="4899344062"/>
+    <nd ref="4899344063"/>
+    <nd ref="4899344064"/>
+    <nd ref="4899344065"/>
+    <nd ref="4899344062"/>
+    <tag k="addr:city" v="Cagayan de Oro"/>
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="addr:street" v="Mayor J.R Borja Street"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="498534325">
+    <nd ref="4899344073"/>
+    <nd ref="4899344074"/>
+    <nd ref="4899344075"/>
+    <nd ref="4899344076"/>
+    <nd ref="4899344077"/>
+    <nd ref="4899344078"/>
+    <nd ref="4899344073"/>
+    <tag k="addr:city" v="Cagayan de Oro"/>
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="addr:street" v="Mayor J.R Borja Street"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="539766677">
+    <nd ref="5222569311"/>
+    <nd ref="5222581374"/>
+    <nd ref="5222569312"/>
+    <nd ref="5222581373"/>
+    <nd ref="5222569313"/>
+    <nd ref="5222569314"/>
+    <nd ref="5222569311"/>
+    <tag k="addr:city" v="Cagayan de Oro"/>
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="addr:street" v="Corrales Ave."/>
+    <tag k="building" v="commercial"/>
+    <tag k="source" v="survey;local knowledge"/>
+  </way>
+  <way id="539766678">
+    <nd ref="5222569316"/>
+    <nd ref="5222569317"/>
+    <nd ref="5222569318"/>
+    <nd ref="5222569319"/>
+    <nd ref="5222569320"/>
+    <nd ref="5222569321"/>
+    <nd ref="5222569322"/>
+    <nd ref="5222569323"/>
+    <nd ref="5222569324"/>
+    <nd ref="5222569316"/>
+    <tag k="addr:city" v="Cagayan de Oro"/>
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="building" v="commercial"/>
+  </way>
+  <way id="539766679">
+    <nd ref="5222569325"/>
+    <nd ref="5222569326"/>
+    <nd ref="5222569327"/>
+    <nd ref="5222569328"/>
+    <nd ref="5222569329"/>
+    <nd ref="5222569330"/>
+    <nd ref="5222569325"/>
+    <tag k="addr:city" v="Cagayan de Oro"/>
+    <tag k="addr:postcode" v="9000"/>
+    <tag k="addr:street" v="Mayor J.R Borja Street"/>
+    <tag k="building" v="commercial"/>
+  </way>
+  <way id="539767995">
+    <nd ref="5222581370"/>
+    <nd ref="5222581369"/>
+    <nd ref="5222581367"/>
+    <nd ref="5222581366"/>
+    <nd ref="5222581371"/>
+    <nd ref="5222581372"/>
+    <nd ref="6975097674"/>
+    <nd ref="6975097675"/>
+    <nd ref="6975097676"/>
+    <nd ref="5222581370"/>
+    <tag k="access" v="yes"/>
+    <tag k="amenity" v="parking"/>
+    <tag k="fee" v="yes"/>
+    <tag k="name" v="Car Park One"/>
+    <tag k="parking" v="surface"/>
+    <tag k="source" v="local knowledge;survey"/>
+    <tag k="supervised" v="yes"/>
+    <tag k="surface" v="gravel"/>
+  </way>
+  <way id="548714856">
+    <nd ref="5300836115"/>
+    <nd ref="5300836114"/>
+    <nd ref="5300836113"/>
+    <nd ref="5300836112"/>
+    <nd ref="5300836115"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="675067507">
+    <nd ref="6322052910"/>
+    <nd ref="6322052911"/>
+    <nd ref="6322052912"/>
+    <nd ref="6322052913"/>
+    <nd ref="6322052910"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="675067508">
+    <nd ref="6322052914"/>
+    <nd ref="6322052915"/>
+    <nd ref="6322052916"/>
+    <nd ref="6322052917"/>
+    <nd ref="6322052914"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="702989197">
+    <nd ref="6601939637"/>
+    <nd ref="6601939636"/>
+    <nd ref="6601939635"/>
+    <nd ref="6601939634"/>
+    <nd ref="6601939637"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="702989199">
+    <nd ref="6601939645"/>
+    <nd ref="6601939644"/>
+    <nd ref="6601939643"/>
+    <nd ref="6601939642"/>
+    <nd ref="6601939645"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="732022517">
+    <nd ref="4889475255"/>
+    <nd ref="6975097673"/>
+    <nd ref="4889475256"/>
+    <nd ref="7655161603"/>
+    <nd ref="2004065394"/>
+    <nd ref="7655161605"/>
+    <nd ref="4889475248"/>
+    <tag k="cycleway" v="no"/>
+    <tag k="highway" v="tertiary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="name" v="Corrales Avenue"/>
+    <tag k="oneway" v="no"/>
+    <tag k="surface" v="concrete"/>
+  </way>
+  <way id="745127500">
+    <nd ref="6975097677"/>
+    <nd ref="6975097678"/>
+    <nd ref="6975097679"/>
+    <nd ref="6975097680"/>
+    <nd ref="6975097681"/>
+    <nd ref="6975097682"/>
+    <nd ref="6975097677"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="785902529">
+    <nd ref="4889475251"/>
+    <nd ref="4889475255"/>
+    <tag k="cycleway" v="no"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="name" v="Corrales Avenue"/>
+    <tag k="oneway" v="no"/>
+    <tag k="surface" v="concrete"/>
+  </way>
+  <way id="785902540">
+    <nd ref="1929862087"/>
+    <nd ref="1024735088"/>
+    <nd ref="4889475253"/>
+    <nd ref="1024735186"/>
+    <nd ref="1024735518"/>
+    <nd ref="282309145"/>
+    <nd ref="1024734828"/>
+    <nd ref="4889475255"/>
+    <nd ref="4919964204"/>
+    <nd ref="7078579232"/>
+    <nd ref="4919964203"/>
+    <nd ref="7078579231"/>
+    <nd ref="1549880655"/>
+    <nd ref="1024735268"/>
+    <nd ref="4919964205"/>
+    <nd ref="7078579230"/>
+    <nd ref="4919964206"/>
+    <nd ref="1887614584"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="cycleway" v="no"/>
+    <tag k="highway" v="primary"/>
+    <tag k="horse" v="no"/>
+    <tag k="lanes" v="4"/>
+    <tag k="name" v="Mayor J.R. Borja Street"/>
+    <tag k="oneway" v="no"/>
+    <tag k="short_name" v="J.R. Borja"/>
+    <tag k="sidewalk" v="both"/>
+    <tag k="surface" v="concrete"/>
+  </way>
+  <way id="854122572">
+    <nd ref="3796308257"/>
+    <nd ref="5222569315"/>
+    <nd ref="3796308260"/>
+    <nd ref="3796308259"/>
+    <nd ref="1982686298"/>
+    <nd ref="3796308257"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <relation id="10931788">
+    <member type="way" ref="785902528" role="outer"/>
+    <member type="way" ref="785902529" role="outer"/>
+    <member type="way" ref="785902540" role="outer"/>
+    <member type="way" ref="785902527" role="outer"/>
+    <tag k="admin_level" v="10"/>
+    <tag k="boundary" v="administrative"/>
+    <tag k="name" v="Barangay 12"/>
+    <tag k="ref" v="104305008"/>
+    <tag k="type" v="boundary"/>
+  </relation>
+  <relation id="10931789">
+    <member type="way" ref="25879946" role="outer"/>
+    <member type="way" ref="785902530" role="outer"/>
+    <member type="way" ref="785902527" role="outer"/>
+    <member type="way" ref="785902540" role="outer"/>
+    <member type="way" ref="785902537" role="outer"/>
+    <member type="way" ref="785902531" role="outer"/>
+    <tag k="admin_level" v="10"/>
+    <tag k="boundary" v="administrative"/>
+    <tag k="name" v="Barangay 11"/>
+    <tag k="ref" v="104305007"/>
+    <tag k="type" v="boundary"/>
+  </relation>
+  <relation id="10931791">
+    <member type="node" ref="3371463372" role="label"/>
+    <member type="way" ref="785902540" role="outer"/>
+    <member type="way" ref="732022517" role="outer"/>
+    <member type="way" ref="785902554" role="outer"/>
+    <member type="way" ref="785902536" role="outer"/>
+    <member type="way" ref="785902538" role="outer"/>
+    <tag k="admin_level" v="10"/>
+    <tag k="boundary" v="administrative"/>
+    <tag k="name" v="Barangay 9"/>
+    <tag k="ref" v="104305035"/>
+    <tag k="type" v="boundary"/>
+  </relation>
+  <relation id="10931792">
+    <member type="node" ref="3371463371" role="label"/>
+    <member type="way" ref="785902540" role="outer"/>
+    <member type="way" ref="785902538" role="outer"/>
+    <member type="way" ref="32806795" role="outer"/>
+    <member type="way" ref="785902544" role="outer"/>
+    <tag k="admin_level" v="10"/>
+    <tag k="boundary" v="administrative"/>
+    <tag k="name" v="Barangay 8"/>
+    <tag k="ref" v="104305034"/>
+    <tag k="type" v="boundary"/>
+  </relation>
+
+</osm>

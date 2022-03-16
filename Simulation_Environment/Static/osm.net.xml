@@ -241,7 +241,9 @@
 
     <tlLogic id="4889475255" type="actuated" programID="0" offset="0">
         <phase duration="39" state="srrrrGGGggsrrrrGGGgg" minDur="13" maxDur="50"/>
+        <phase duration="6"  state="srrrryyyyysrrrryyyyy"/>
         <phase duration="39" state="GGGggsrrrrGGGggsrrrr" minDur="13" maxDur="50"/>
+        <phase duration="6"  state="yyyyysrrrryyyyysrrrr"/>
     </tlLogic>
 
     <junction id="1887614584" type="priority" x="867.47" y="20.04" incLanes="785902540#2_0 785902540#2_1" intLanes=":1887614584_0_0" shape="867.47,20.04 865.78,13.86 867.47,20.04">

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-03-13 01:47:09 by Eclipse SUMO sumo Version 1.10.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="Simulation_Environment\Main%20Route%20Simulation\osm.net.xml"/>
+        <route-files value="Simulation_Environment\Main%20Route%20Simulation\cars_SUV.xml,Simulation_Environment\Main%20Route%20Simulation\motorcycles_scooters.xml,Simulation_Environment\Main%20Route%20Simulation\taxi.xml,Simulation_Environment\Main%20Route%20Simulation\buses.xml,Simulation_Environment\Main%20Route%20Simulation\smallTrucks.xml,Simulation_Environment\Main%20Route%20Simulation\largeTrucks.xml,Simulation_Environment\Main%20Route%20Simulation\bicycle_tricycle.xml,Simulation_Environment\Main%20Route%20Simulation\jeepney.xml,Simulation_Environment\Main%20Route%20Simulation\motorela.xml"/>
+        <additional-files value="Simulation_Environment\Main%20Route%20Simulation\osm.poly.xml,Simulation_Environment\Main%20Route%20Simulation\osm.det.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="Data\tripinfo.xml"/>
+    </output>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-steps value="18"/>
+        <device.rerouting.adaptation-interval value="10"/>
+    </routing>
+
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="55994"/>
+    </traci_server>
+
+    <gui_only>
+        <gui-settings-file value="Simulation_Environment\Main%20Route%20Simulation\osm.view.xml"/>
+        <start value="true"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e2_file.xsd">
+</detector>

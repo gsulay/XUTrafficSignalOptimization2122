@@ -19,11 +19,12 @@ def run():
 
 
 if __name__ == '__main__':
-    output_path = Path('Data\Static')
+    output_path = Path('Data\Actuated')
     if os.path.isdir(output_path):
         pass
     else:
         os.mkdir(output_path)
+    
     traci.start([checkBinary('sumo-gui'), '-c', 'Simulation_Environment\Actuated\osm.sumocfg',
-    '--tripinfo-output', os.path.join(output_path,'trip-info.xml'),'--start','-a','dars u put'])
+    '--tripinfo-output', os.path.join(output_path,'trip-info.xml'),'--start','-a','Simulation_Environment\Actuated\osm.tlLogic.xml'])
     run()

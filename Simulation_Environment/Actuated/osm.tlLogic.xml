@@ -8,14 +8,14 @@
         <param key="file" value="NULL"/>
         <param key="freq" value="300"/>
 
-        <param key="785902529_0" value="aN_0"/>
-        <param key="785902529_1" value="aN_1"/>
-        <param key="785902540#0_0" value="aW_0"/>
-        <param key="785902540#0_1" value="aW_1"/>
-        <param key="-732022517_0" value="aS_0"/>
-        <param key="-732022517_1" value="aS_1"/>
-        <param key="-785902540#2_0" value="aE_0"/>
-        <param key="-785902540#2_1" value="aE_1"/>
+        <param key="aN_0" value="785902529_0"/>
+        <param key="aN_1" value="785902529_1"/>
+        <param key="aW_0" value="785902540#0_0"/>
+        <param key="aW_1" value="785902540#0_1"/>
+        <param key="aS_0" value="-732022517_0"/>
+        <param key="aS_1" value="-732022517_1"/>
+        <param key="aE_0" value="-785902540#2_0"/>
+        <param key="aE_1" value="-785902540#2_1"/>
 
         <phase duration="35" state="GGGrrsrrrrGGGrrsrrrr" minDur="20" maxDur="60"/>
         <phase duration="3" state="yyyrrsrrrryyyrrsrrrr"/>

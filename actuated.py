@@ -23,6 +23,6 @@ if __name__ == '__main__':
         pass
     else:
         os.mkdir(output_path)
-    traci.start([checkBinary('sumo-gui'), '-c', 'Simulation_Environment\Static\osm.sumocfg',
-    '--tripinfo-output', os.path.join(output_path,'trip-info.xml'),'--start','-a','ouptput s'])
+    traci.start([checkBinary('sumo-gui'), '-c', 'Simulation_Environment\Actuated\osm.sumocfg',
+    '--tripinfo-output', os.path.join(output_path,'trip-info.xml'),'--start','-a','dars u put'])
     run()

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2021-11-09 10:33:11 by Eclipse SUMO duarouter Version 1.10.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\sulay\Sumo\2021-11-09-10-33-08\osm.net.xml"/>
+        <route-files value="C:\Users\sulay\Sumo\2021-11-09-10-33-08\osm.truck.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\sulay\Sumo\2021-11-09-10-33-08\osm.truck.trips.xml.tmp"/>
+        <write-trips value="true"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="truck_truck" vClass="truck"/>
+    <trip id="truck0" type="truck_truck" depart="0.00" departLane="best" departSpeed="max" from="785902540#0" to="-785902529"/>
+    <trip id="truck1" type="truck_truck" depart="407.50" departLane="best" departSpeed="max" from="785902540#0" to="-785902529"/>
+    <trip id="truck2" type="truck_truck" depart="815.00" departLane="best" departSpeed="max" from="785902529" to="-785902540#1"/>
+    <trip id="truck3" type="truck_truck" depart="1222.49" departLane="best" departSpeed="max" from="785902540#0" to="785902540#2"/>
+    <trip id="truck4" type="truck_truck" depart="1629.99" departLane="best" departSpeed="max" from="-785902540#2" to="-785902540#1"/>
+    <trip id="truck5" type="truck_truck" depart="2037.49" departLane="best" departSpeed="max" from="785902529" to="-785902540#1"/>
+    <trip id="truck6" type="truck_truck" depart="2444.99" departLane="best" departSpeed="max" from="785902529" to="-785902540#1"/>
+    <trip id="truck7" type="truck_truck" depart="2852.49" departLane="best" departSpeed="max" from="785902540#0" to="785902540#2"/>
+    <trip id="truck8" type="truck_truck" depart="3259.98" departLane="best" departSpeed="max" from="785902540#0" to="785902540#2"/>
+</routes>

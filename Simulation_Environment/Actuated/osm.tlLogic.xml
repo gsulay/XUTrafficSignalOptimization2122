@@ -1,0 +1,26 @@
+<additional>
+    <tlLogic id="4889475255" type="actuated" programID="1" offset="0">
+        <param key="max-gap" value="3.0"/>
+        <param key="detector-gap" value="2.0"/>
+        <param key="passing-time" value="2.0"/>
+        <param key="vTypes" value=""/>
+        <param key="show-detectors" value="false"/>
+        <param key="file" value="NULL"/>
+        <param key="freq" value="300"/>
+
+        <param key="785902529_0" value="aN_0"/>
+        <param key="785902529_1" value="aN_1"/>
+        <param key="785902540#0_0" value="aW_0"/>
+        <param key="785902540#0_1" value="aW_1"/>
+        <param key="-732022517_0" value="aS_0"/>
+        <param key="-732022517_1" value="aS_1"/>
+        <param key="-785902540#2_0" value="aE_0"/>
+        <param key="-785902540#2_1" value="aE_1"/>
+
+        <phase duration="35" state="GGGrrsrrrrGGGrrsrrrr" minDur="20" maxDur="60"/>
+        <phase duration="3" state="yyyrrsrrrryyyrrsrrrr"/>
+        <phase duration="25" state="srrrrGGGrrsrrrrGGGrr" minDur="20" maxDur="60"/>
+        <phase duration="3" state="srrrryyyrrsrrrryyyrr"/>
+
+    </tlLogic>
+</additional>

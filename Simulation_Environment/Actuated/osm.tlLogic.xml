@@ -4,7 +4,7 @@
         <param key="detector-gap" value="2.0"/>
         <param key="passing-time" value="2.0"/>
         <param key="vTypes" value=""/>
-        <param key="show-detectors" value="false"/>
+        <param key="show-detectors" value="true"/>
         <param key="file" value="NULL"/>
         <param key="freq" value="300"/>
 

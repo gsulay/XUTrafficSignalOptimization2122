@@ -286,7 +286,7 @@ def train(gui=False, train=True, debug=False, epochs = 80, mem_size = 1500, batc
     traci.close()
     return target_net, losses_progression
 
-def continue_train(net, last_epoch, gui=False, train=True, debug=False, epochs = 80, mem_size = 1500, batch_size = 800, sync_freq = 500, epsilon = 0.3, discount_factor=0.9, learning_rate = 1e-4):
+def continue_train(net, last_epoch, gui=False, train=True, debug=False, epochs = 5, mem_size = 1500, batch_size = 800, sync_freq = 500, epsilon = 0.3, discount_factor=0.9, learning_rate = 1e-4):
     env = SumoEnvrionment(gui = gui)
     target_net.load_state_dict(net.state_dict())
 

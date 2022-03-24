@@ -12,6 +12,7 @@ import traci  # noqa
 
 
 def run():
+    traci.trafficlight.setProgram('4889475255',1)
     while traci.simulation.getMinExpectedNumber() > 0:
         traci.simulation.step()
     traci.close()

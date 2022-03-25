@@ -41,7 +41,7 @@ if __name__ == '__main__':
                 print("Running SUMO...")
                 print('-------------------------------------------------------------------')
 
-                losses, epochs = dqn.continue_train(model, last_epoch=last_epoch, epochs=epochs)
+                losses, epochs = dqn.train(model, last_epoch=last_epoch, epochs=epochs)
                 
                 print('Running Loss Graph...')
 
@@ -54,6 +54,8 @@ if __name__ == '__main__':
                 dqn.evaluate(model)
             elif run_type == 0:
                 epochs = int(input('How Many Epochs?:   '))
+                print("Running SUMO...")
+                print('-------------------------------------------------------------------')
                 target_net, losses = dqn.train(epochs=epochs, gui=False)
                 dqn.evaluate(target_net)
                 dqn.graph_losses(losses)

@@ -59,7 +59,28 @@ class SumoEnvrionment:
 
         self.traffic_light = traci.trafficlight.getIDList()[0]
         self.get_phase_data(self.traffic_light)
+        self.teleported_number = traci.simulation.getStartingTeleportNumber()
+        
+        self.waiting_time = {}
+        self.set_incoming_lanes()
+        self.sum_waiting_time = 0
+        self.old_waiting_time = 0
+    
+    def reset(self):
+        self.all_speed = []
+        self.teleported_number = traci.simulation.getStartingTeleportNumber()
+        self.waiting_time = {}
+        self.set_incoming_lanes()
+        self.sum_waiting_time = 0
+        self.old_waiting_time = 0
 
+
+    def set_incoming_lanes(self):
+        self.incoming_lanes = []
+        e2_detectors = traci.lanearea.getIDList()
+        for detector in e2_detectors:
+            incoming_lane = traci.lanearea.getLaneID(detector)
+            self.incoming_lanes.append(incoming_lane)
     
     def sumo_initialize(self):
         options = self.get_options()
@@ -106,11 +127,11 @@ class SumoEnvrionment:
         options, args = optParser.parse_args()
         return options
     
-    def update_lane_data(self):
-        for lane in self.lane_IDs:
-            lane_data = traci.lanearea.getLastStepHaltingNumber(lane)
-            self.lanes_dict[lane].append(lane_data)
-        return self.lanes_dict
+    # def update_lane_data(self):
+    #     for lane in self.lane_IDs:
+    #         lane_data = traci.lanearea.getLastStepHaltingNumber(lane)
+    #         self.lanes_dict[lane].append(lane_data)
+    #     return self.lanes_dict
     
     def save_vehicle_ids(self, lanes_dict):
         vehicle_ids=pd.DataFrame(lanes_dict)
@@ -118,24 +139,99 @@ class SumoEnvrionment:
         vehicle_ids.to_csv('test.csv')
 
     def get_reward(self):
-        all_speed = []
-        e2_detectors = traci.lanearea.getIDList()
+        def positive_speed():
+            all_speed = []
+            e2_detectors = traci.lanearea.getIDList()
 
-        for detector in e2_detectors:
-            speed = traci.lanearea.getLastStepMeanSpeed(detector)
-            if speed < 0:
-                speed = 0
-            all_speed.append(speed)
+            for detector in e2_detectors:
+                speed = traci.lanearea.getLastStepMeanSpeed(detector)
+                if speed < 0:
+                    speed = 0
+                all_speed.append(speed)
 
-        population = len(all_speed)
-        all_speed = np.array(all_speed)
-        speed_max = all_speed.max()
-        if speed_max == 0:
-            return 0
-        speed_max_ratio = all_speed/speed_max
-        speed_max_sum = speed_max_ratio.sum()
+            population = len(all_speed)
+            all_speed = np.array(all_speed)
+            speed_max = all_speed.max()
+            if speed_max == 0:
+                return 0
+            speed_max_ratio = all_speed/speed_max
+            speed_max_sum = speed_max_ratio.sum()
 
-        return (1/population)*speed_max_sum
+            return (1/population)*speed_max_sum
+
+        def pos_alter():
+            all_speed = []
+            vehicles = traci.vehicle.getIDList()
+            for vehicle in vehicles:
+                speed = traci.vehicle.getSpeed(vehicle)
+                if speed < 0:
+                    speed = 0
+                road_in = traci.vehicle.getRoadID(vehicle)
+                if road_in in self.incoming_lanes:
+                    all_speed.append(speed)
+            try:
+                population = len(all_speed)
+                all_speed = np.array(all_speed)
+                speed_max = all_speed.max()
+                if speed_max == 0:
+                    return 0
+                speed_max_ratio = all_speed/speed_max
+                speed_max_sum = speed_max_ratio.sum()
+
+                return (1/population)*speed_max_sum
+            except ValueError:
+                return 0
+
+            
+        def negative_speed():
+            all_speed = []
+            e2_detectors = traci.lanearea.getIDList()
+
+            for detector in e2_detectors:
+                vehicles = traci.lanearea.getLastStepVehicleIDs(detector)
+                for vehicle in vehicles:
+                    speed = traci.vehicle.getSpeed(vehicle)
+                    if speed < 0:
+                        speed = 0
+                    all_speed.append(speed)
+            all_speed = np.array(all_speed)
+
+            reward = all_speed.sum()/len(all_speed)*3.6 #get speed from m/s to km/h
+            # print(reward)
+            return reward
+        
+        def waiting_time():
+            cars = traci.vehicle.getIDList()
+            for car in cars:
+                wait_time = traci.vehicle.getAccumulatedWaitingTime(car)
+                road_in = traci.vehicle.getRoadID(car)
+                if road_in in self.incoming_lanes:
+                    self.waiting_time[car] = wait_time
+                else:
+                    if car in self.waiting_time:
+                        del self.waiting_time[car]
+            
+            total_waiting_time = sum(self.waiting_time.values())
+            reward = self.old_waiting_time - total_waiting_time
+            self.old_waiting_time = total_waiting_time
+            print(total_waiting_time)
+            return reward
+        
+        def queue_length():
+            queue_all = np.array([])
+            e2_detectors = traci.lanearea.getIDList()
+            for detector in e2_detectors:
+                queue = traci.lanearea.getJamLengthMeters(detector)
+                queue_all = np.append(queue_all,np.float16(queue))
+            return -queue_all.sum()/1000    #from m to km
+        
+
+        #Edit result to use different reward functios
+        result = queue_length() + positive_speed()*0.75
+        #however, if reward causes extreme queue length, severely punish the system
+
+        # print(result)
+        return result
 
     def get_state(self, trafficlight):
         e2_detectors = traci.lanearea.getIDList()
@@ -149,9 +245,6 @@ class SumoEnvrionment:
         return arry
     
     def action(self, action):
-        self.lanes_dict = self.update_lane_data()
-        vehicle_ids=pd.DataFrame(self.lanes_dict)
-        vehicle_ids['Steps'] = np.arange(0,len(self.lanes_dict[self.lane_IDs[0]]),1)
         
         #creates a function that turns green going red to yellow states
         def change_green_to_yellow(to,prev):
@@ -183,21 +276,25 @@ class SumoEnvrionment:
         return traci.simulation.getMinExpectedNumber() == 0
 
 
-def train(gui=False, train=True, debug=False, epochs = 80, mem_size = 1500, batch_size = 800, sync_freq = 500, epsilon = 0.3, discount_factor=0.9, learning_rate = 1e-4):
+def train(net=None, gui=False, train=True, debug=False, epochs = 5, mem_size = 1500, 
+        batch_size = 200, sync_freq = 300, epsilon = 0.3, discount_factor=0.7, learning_rate = 1e-6, last_epoch=0):
 
     env = SumoEnvrionment(gui=gui)
     states_length = len(env.get_state(env.traffic_light))
-
-    net = Net(states_length,env.total_phases)
-    target_net = Net(states_length,env.total_phases)
+    
+    if train==True:
+        net = Net(states_length,env.total_phases)
+        target_net = Net(states_length,env.total_phases)
+        
+    else:
+        if net != None:
+            net = net
+        else:
+            print('No model in variable. Please add model')
+            raise AttributeError
 
     replay = deque(maxlen=mem_size)
-    
-    
-    
-
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-
     loss_fn = nn.MSELoss()
     optimizer = torch.optim.Adam(net.parameters(), lr = learning_rate)
     losses_progression=[]
@@ -205,12 +302,10 @@ def train(gui=False, train=True, debug=False, epochs = 80, mem_size = 1500, batc
     for i in tqdm(range(epochs), file = sys.stdout):
         state1_ = env.get_state(env.traffic_light)
         state1 = torch.from_numpy(state1_).float().unsqueeze(dim=0).to(device)
-
         step = 0
         done = False
         net.to(device)
         while not done:
-
             #For debugging purposes only
             if debug:
                 if int(traci.simulation.getTime()) > 10000:
@@ -223,9 +318,12 @@ def train(gui=False, train=True, debug=False, epochs = 80, mem_size = 1500, batc
             else:
                 action = torch.argmax(qval)
             
+            # print(action)
+            
             env.action(action)
             state2_ = env.get_state(env.traffic_light)
             state2 = torch.from_numpy(state2_).float().unsqueeze(dim=0).to(device)
+
             reward = env.get_reward()
             done = env.is_done()
             exp = [state1, action, reward, state2, done]
@@ -247,13 +345,13 @@ def train(gui=False, train=True, debug=False, epochs = 80, mem_size = 1500, batc
                 with torch.no_grad():
                     Q2 = target_net(state2_batch)
                 
-                Y = reward_batch + ((1-done_batch)*discount_factor*torch.max(Q2, dim=1)[0])
+                Y = reward_batch + discount_factor*((1-done_batch)*torch.max(Q2, dim=1)[0])
                 X = Q1.gather(dim=1,index=action_batch.long().unsqueeze(dim=1)).squeeze()
 
                 # if there are is colliding vehicles, set reward to 0
-                if traci.simulation.getCollidingVehiclesNumber() > 0:
-                    print(f"{traci.simulation.getCollidingVehiclesNumber()} crashed.")
-                    Y = torch.zeros(Y.shape)
+                # if traci.simulation.getCollidingVehiclesNumber() > 0:
+                #     print(f"{traci.simulation.getCollidingVehiclesNumber()} crashed.")
+                #     Y = torch.zeros(Y.shape)
 
                 loss = loss_fn(X,Y.detach())
                 
@@ -271,6 +369,8 @@ def train(gui=False, train=True, debug=False, epochs = 80, mem_size = 1500, batc
             if done:
                  step = 0
                  prev_sync = 0
+                 env.reset()
+
         if gui == False:
             traci.close()
             traci.start([env.sumoBinary, "-c", "Simulation_Environment\Main Route Simulation\osm.sumocfg",
@@ -282,103 +382,18 @@ def train(gui=False, train=True, debug=False, epochs = 80, mem_size = 1500, batc
 
     target_net.to(torch.device('cpu'))
     local_time="_".join([str(i) for i in list(time.localtime())])
-    torch.save(target_net, Path(f'DQN_Model/Model-{epochs}epochs-_{local_time}.pth'))
-    traci.close()
-    return target_net, losses_progression
 
-def continue_train(net, last_epoch, gui=False, train=True, debug=False, epochs = 5, mem_size = 1500, batch_size = 800, sync_freq = 500, epsilon = 0.3, discount_factor=0.9, learning_rate = 1e-4):
-    env = SumoEnvrionment(gui = gui)
-    target_net.load_state_dict(net.state_dict())
+    cur_epoch = epochs + last_epoch
+    save_path = f'DQN_Model/Model-{cur_epoch}epochs-_{local_time}'
+    if os.path.isdir(save_path) == False:
+        os.mkdir(save_path)
 
-    replay = deque(maxlen=mem_size)
-
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
-    loss_fn = nn.MSELoss()
-    optimizer = torch.optim.Adam(net.parameters(), lr = learning_rate)
-    losses_progression=[]
-    prev_sync = 0
-    for i in tqdm(range(epochs), file = sys.stdout):
-        state1_ = env.get_state(env.traffic_light)
-        state1 = torch.from_numpy(state1_).float().unsqueeze(dim=0).to(device)
-
-        step = 0
-        done = False
-        net.to(device)
-        while not done:
-
-            #For debugging purposes only
-            if debug:
-                if int(traci.simulation.getTime()) > 10000:
-                    break
-
-            qval = net(state1)
-            # qval_ = qval.data.numpy()
-            if random.random() < epsilon:
-                action = np.random.randint(0,env.total_phases)
-            else:
-                action = torch.argmax(qval)
-            
-            env.action(action)
-            state2_ = env.get_state(env.traffic_light)
-            state2 = torch.from_numpy(state2_).float().unsqueeze(dim=0).to(device)
-            reward = env.get_reward()
-            done = env.is_done()
-            exp = [state1, action, reward, state2, done]
-            replay.append(exp)
-            state1 = state2
-
-            if len(replay) > batch_size:
-                minibatch = random.sample(replay, batch_size)
-                state1_batch = torch.cat([s1 for (s1,a,r,s2,d) in minibatch]).to(device)
-                action_batch = torch.Tensor([a for (s1,a,r,s2,d) in minibatch]).to(device)
-                reward_batch = torch.Tensor([r for (s1,a,r,s2,d) in minibatch]).to(device)
-                state2_batch = torch.cat([s2 for (s1,a,r,s2,d) in minibatch]).to(device)
-                done_batch = torch.Tensor([d for (s1,a,r,s2,d) in minibatch]).to(device)
-
-                net.to(device)
-                Q1 = net(state1_batch)
-
-                target_net.to(device)
-                with torch.no_grad():
-                    Q2 = target_net(state2_batch)
-                
-                Y = reward_batch + ((1-done_batch)*discount_factor*torch.max(Q2, dim=1)[0])
-                X = Q1.gather(dim=1,index=action_batch.long().unsqueeze(dim=1)).squeeze()
-
-                # if there are is colliding vehicles, set reward to 0
-                if traci.simulation.getCollidingVehiclesNumber() > 0:
-                    print(f"{traci.simulation.getCollidingVehiclesNumber()} crashed.")
-                    Y = torch.zeros(Y.shape)
-
-                loss = loss_fn(X,Y.detach())
-                
-                optimizer.zero_grad()
-                loss.backward()
-                optimizer.step()
-                
-                losses_progression.append([i,loss.item()])
-
-                current_sync = int(traci.simulation.getTime())
-                if (current_sync - prev_sync) > sync_freq:
-                    print(f"Syncs at {int(traci.simulation.getTime())} seconds.")
-                    target_net.load_state_dict(net.state_dict())
-                    prev_sync = current_sync
-            if done:
-                 step = 0
-                 prev_sync = 0
-        if gui == False:
-            traci.close()
-            traci.start([env.sumoBinary, "-c", "Simulation_Environment\Main Route Simulation\osm.sumocfg",
-                             "--tripinfo-output", "Data\\tripinfo.xml",  "--start"])
-        if gui == True:
-            traci.close()
-            traci.load(["-c", "Simulation_Environment\Main Route Simulation\osm.sumocfg",
-                             "--tripinfo-output", "Data\\tripinfo.xml",  "--start"])
-
-    target_net.to(torch.device('cpu'))
-    local_time="_".join([str(i) for i in list(time.localtime())])
-    torch.save(target_net, Path(f'DQN_Model/Model-{last_epoch + epochs}epochs-_{local_time}.pth'))
+    #Saves Model and Losses Data
+    torch.save(target_net, os.path.join(save_path,Path(f'Model-{cur_epoch}epochs-_{local_time}.pth')))
+    losses_progression_df = pd.DataFrame(losses_progression)
+    losses_progression_df.iloc[:,0] = losses_progression_df.iloc[:,0].apply(lambda x: x + last_epoch)
+    losses_progression_df.to_csv(os.path.join(save_path,Path(f'Losses.csv')))
+    
     traci.close()
     return target_net, losses_progression
 
@@ -428,13 +443,13 @@ def evaluate(target_net):
 
 
 if __name__ == '__main__':
-    target_net, losses = train(epochs=2, gui=False)
+    target_net, losses = train(epochs=1, gui=False)
 
-    # t1 = threading.Thread(target=graph_losses, args=[losses, 0])
+    t1 = threading.Thread(target=graph_losses, args=[losses, 0])
     t2 = threading.Thread(target=evaluate, args=[target_net])
 
-    # t1.start()
+    t1.start()
     t2.start()
 
-    # t1.join()
+    t1.join()
     t2.join()

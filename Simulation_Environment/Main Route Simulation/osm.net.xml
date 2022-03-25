@@ -239,7 +239,7 @@
         </lane>
     </edge>
 
-    <tlLogic id="4889475255" type="actuated" programID="0" offset="0">
+    <tlLogic id="4889475255" type="static" programID="0" offset="0">
         <phase duration="39" state="srrrrGGGggsrrrrGGGgg" minDur="13" maxDur="50"/>
         <phase duration="39" state="GGGggsrrrrGGGggsrrrr" minDur="13" maxDur="50"/>
     </tlLogic>

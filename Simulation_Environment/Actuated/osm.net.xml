@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2022-03-24 13:45:25 by Eclipse SUMO netedit Version 1.10.0
+<!-- generated on 2022-04-05 06:35:43 by Eclipse SUMO netedit Version 1.10.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
-        <sumo-net-file value="C:\Users\Lenovo\Desktop\IOT%20CODING%20SHIT\XUTrafficSignalOptimization2122\Simulation_Environment\Static\osm.net.xml"/>
+        <sumo-net-file value="D:\School%20Drive\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Actuated\osm.net.xml"/>
     </input>
 
     <output>
-        <output-file value="C:\Users\Lenovo\Desktop\IOT%20CODING%20SHIT\XUTrafficSignalOptimization2122\Simulation_Environment\Static\osm.net.xml"/>
+        <output-file value="D:\School%20Drive\Programming\Gthub%20Repo\Genetic_Fuzzy_Algo\Simulation_Environment\Actuated\osm.net.xml"/>
         <output.street-names value="true"/>
     </output>
 
@@ -140,67 +140,67 @@
         <lane id=":4889475255_19_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="4.67" shape="540.64,138.81 542.02,139.25 542.62,139.91 542.46,140.79 541.52,141.89"/>
     </edge>
 
-    <edge id="-732022517" from="4889475248" to="4889475255" name="Corrales Avenue" priority="10" type="highway.tertiary" shape="511.45,0.00 512.75,9.58 519.68,47.12 524.68,65.58 531.82,84.57 540.55,110.14 551.85,137.28">
-        <lane id="-732022517_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.22" length="131.65" shape="516.21,-0.65 517.49,8.82 524.36,46.06 529.25,64.10 536.34,82.95 545.04,108.44 551.98,125.10">
+    <edge id="-732022517" from="4889475248" to="4889475255" name="Corrales Avenue" priority="10" type="highway.tertiary" length="100.00" shape="511.45,0.00 512.75,9.58 519.68,47.12 524.68,65.58 531.82,84.57 540.55,110.14 551.85,137.28">
+        <lane id="-732022517_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.22" length="100.00" shape="516.21,-0.65 517.49,8.82 524.36,46.06 529.25,64.10 536.34,82.95 545.04,108.44 551.98,125.10">
             <param key="origId" value="732022517"/>
         </lane>
-        <lane id="-732022517_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.22" length="131.65" shape="513.04,-0.22 514.33,9.33 521.24,46.77 526.20,65.09 533.33,84.03 542.05,109.57 549.02,126.33">
-            <param key="origId" value="732022517"/>
-        </lane>
-    </edge>
-    <edge id="-785902529" from="4889475255" to="4889475251" name="Corrales Avenue" priority="11" type="highway.secondary">
-        <lane id="-785902529_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="81.89" shape="562.50,144.81 607.31,213.35">
-            <param key="origId" value="785902529"/>
-        </lane>
-        <lane id="-785902529_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="81.89" shape="559.83,146.56 604.63,215.10">
-            <param key="origId" value="785902529"/>
-        </lane>
-    </edge>
-    <edge id="-785902540#1" from="4889475255" to="1929862087" name="Mayor J.R. Borja Street" priority="12" type="highway.primary" shape="551.85,137.28 435.27,170.50 342.79,197.33 257.91,223.30 217.09,235.01 172.46,248.36 27.00,293.43 0.00,301.28">
-        <lane id="-785902540#1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="564.52" shape="542.40,144.96 436.60,175.11 344.16,201.93 259.27,227.90 218.44,239.62 173.86,252.95 28.38,298.03 1.34,305.89">
-            <param key="origId" value="785902540"/>
-        </lane>
-        <lane id="-785902540#1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="564.52" shape="541.52,141.89 435.71,172.04 343.25,198.86 258.36,224.83 217.54,236.55 172.93,249.89 27.46,294.96 0.45,302.82">
-            <param key="origId" value="785902540"/>
-        </lane>
-    </edge>
-    <edge id="-785902540#2" from="1887614584" to="4889475255" name="Mayor J.R. Borja Street" priority="12" type="highway.primary" shape="867.47,20.04 796.61,39.40 786.14,42.27 777.17,44.80 767.38,47.59 712.32,75.40 656.99,98.28 637.85,106.19 619.12,113.16 601.52,119.60 551.85,137.28">
-        <lane id="-785902540#2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="325.16" shape="868.74,24.67 797.88,44.03 787.42,46.89 778.48,49.42 769.14,52.08 714.32,79.77 658.82,102.72 639.60,110.66 620.78,117.66 603.15,124.11 564.89,137.73">
-            <param key="origId" value="785902540"/>
-        </lane>
-        <lane id="-785902540#2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="325.16" shape="867.89,21.58 797.03,40.94 786.57,43.81 777.61,46.34 767.97,49.09 712.99,76.86 657.60,99.76 638.43,107.68 619.67,114.66 602.06,121.10 563.81,134.72">
-            <param key="origId" value="785902540"/>
-        </lane>
-    </edge>
-    <edge id="732022517" from="4889475255" to="4889475248" name="Corrales Avenue" priority="10" type="highway.tertiary" shape="551.85,137.28 540.55,110.14 531.82,84.57 524.68,65.58 519.68,47.12 512.75,9.58 511.45,0.00">
-        <lane id="732022517_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.22" length="133.31" shape="543.12,128.79 536.06,111.84 527.30,86.19 520.11,67.06 515.00,48.18 508.01,10.34 506.69,0.65">
-            <param key="origId" value="732022517"/>
-        </lane>
-        <lane id="732022517_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.22" length="133.31" shape="546.07,127.56 539.05,110.71 530.31,85.11 523.16,66.07 518.12,47.47 511.17,9.83 509.86,0.22">
+        <lane id="-732022517_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.22" length="100.00" shape="513.04,-0.22 514.33,9.33 521.24,46.77 526.20,65.09 533.33,84.03 542.05,109.57 549.02,126.33">
             <param key="origId" value="732022517"/>
         </lane>
     </edge>
-    <edge id="785902529" from="4889475251" to="4889475255" name="Corrales Avenue" priority="11" type="highway.secondary">
-        <lane id="785902529_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="81.89" shape="599.27,218.61 554.47,150.06">
+    <edge id="-785902529" from="4889475255" to="4889475251" name="Corrales Avenue" priority="11" type="highway.secondary" length="100.00">
+        <lane id="-785902529_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="100.00" shape="562.50,144.81 607.31,213.35">
             <param key="origId" value="785902529"/>
         </lane>
-        <lane id="785902529_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="81.89" shape="601.95,216.86 557.15,148.31">
+        <lane id="-785902529_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="100.00" shape="559.83,146.56 604.63,215.10">
             <param key="origId" value="785902529"/>
         </lane>
     </edge>
-    <edge id="785902540#0" from="1929862087" to="4889475255" name="Mayor J.R. Borja Street" priority="12" type="highway.primary" shape="0.00,301.28 27.00,293.43 172.46,248.36 217.09,235.01 257.91,223.30 342.79,197.33 435.27,170.50 551.85,137.28">
-        <lane id="785902540#0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="564.55" shape="-1.34,296.67 25.62,288.83 171.06,243.77 215.74,230.40 256.55,218.70 341.42,192.73 433.94,165.89 539.77,135.73">
+    <edge id="-785902540#1" from="4889475255" to="1929862087" name="Mayor J.R. Borja Street" priority="12" type="highway.primary" length="100.00" shape="551.85,137.28 435.27,170.50 342.79,197.33 257.91,223.30 217.09,235.01 172.46,248.36 27.00,293.43 0.00,301.28">
+        <lane id="-785902540#1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="100.00" shape="542.40,144.96 436.60,175.11 344.16,201.93 259.27,227.90 218.44,239.62 173.86,252.95 28.38,298.03 1.34,305.89">
             <param key="origId" value="785902540"/>
         </lane>
-        <lane id="785902540#0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="564.55" shape="-0.45,299.74 26.54,291.90 171.99,246.83 216.64,233.47 257.46,221.77 342.33,195.80 434.83,168.96 540.64,138.81">
+        <lane id="-785902540#1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="100.00" shape="541.52,141.89 435.71,172.04 343.25,198.86 258.36,224.83 217.54,236.55 172.93,249.89 27.46,294.96 0.45,302.82">
             <param key="origId" value="785902540"/>
         </lane>
     </edge>
-    <edge id="785902540#2" from="4889475255" to="1887614584" name="Mayor J.R. Borja Street" priority="12" type="highway.primary" shape="551.85,137.28 601.52,119.60 619.12,113.16 637.85,106.19 656.99,98.28 712.32,75.40 767.38,47.59 777.17,44.80 786.14,42.27 796.61,39.40 867.47,20.04">
-        <lane id="785902540#2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="325.64" shape="561.67,128.69 599.89,115.09 617.46,108.66 636.10,101.72 655.16,93.84 710.32,71.03 765.62,43.10 775.86,40.18 784.86,37.65 795.34,34.77 866.20,15.41">
+    <edge id="-785902540#2" from="1887614584" to="4889475255" name="Mayor J.R. Borja Street" priority="12" type="highway.primary" length="100.00" shape="867.47,20.04 796.61,39.40 786.14,42.27 777.17,44.80 767.38,47.59 712.32,75.40 656.99,98.28 637.85,106.19 619.12,113.16 601.52,119.60 551.85,137.28">
+        <lane id="-785902540#2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="100.00" shape="868.74,24.67 797.88,44.03 787.42,46.89 778.48,49.42 769.14,52.08 714.32,79.77 658.82,102.72 639.60,110.66 620.78,117.66 603.15,124.11 564.89,137.73">
             <param key="origId" value="785902540"/>
         </lane>
-        <lane id="785902540#2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="325.64" shape="562.74,131.71 600.98,118.10 618.57,111.66 637.27,104.70 656.38,96.80 711.65,73.94 766.79,46.09 776.73,43.26 785.71,40.73 796.19,37.86 867.05,18.50">
+        <lane id="-785902540#2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="100.00" shape="867.89,21.58 797.03,40.94 786.57,43.81 777.61,46.34 767.97,49.09 712.99,76.86 657.60,99.76 638.43,107.68 619.67,114.66 602.06,121.10 563.81,134.72">
+            <param key="origId" value="785902540"/>
+        </lane>
+    </edge>
+    <edge id="732022517" from="4889475255" to="4889475248" name="Corrales Avenue" priority="10" type="highway.tertiary" length="100.00" shape="551.85,137.28 540.55,110.14 531.82,84.57 524.68,65.58 519.68,47.12 512.75,9.58 511.45,0.00">
+        <lane id="732022517_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.22" length="100.00" shape="543.12,128.79 536.06,111.84 527.30,86.19 520.11,67.06 515.00,48.18 508.01,10.34 506.69,0.65">
+            <param key="origId" value="732022517"/>
+        </lane>
+        <lane id="732022517_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.22" length="100.00" shape="546.07,127.56 539.05,110.71 530.31,85.11 523.16,66.07 518.12,47.47 511.17,9.83 509.86,0.22">
+            <param key="origId" value="732022517"/>
+        </lane>
+    </edge>
+    <edge id="785902529" from="4889475251" to="4889475255" name="Corrales Avenue" priority="11" type="highway.secondary" length="100.00">
+        <lane id="785902529_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="100.00" shape="599.27,218.61 554.47,150.06">
+            <param key="origId" value="785902529"/>
+        </lane>
+        <lane id="785902529_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="100.00" shape="601.95,216.86 557.15,148.31">
+            <param key="origId" value="785902529"/>
+        </lane>
+    </edge>
+    <edge id="785902540#0" from="1929862087" to="4889475255" name="Mayor J.R. Borja Street" priority="12" type="highway.primary" length="100.00" shape="0.00,301.28 27.00,293.43 172.46,248.36 217.09,235.01 257.91,223.30 342.79,197.33 435.27,170.50 551.85,137.28">
+        <lane id="785902540#0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="100.00" shape="-1.34,296.67 25.62,288.83 171.06,243.77 215.74,230.40 256.55,218.70 341.42,192.73 433.94,165.89 539.77,135.73">
+            <param key="origId" value="785902540"/>
+        </lane>
+        <lane id="785902540#0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="100.00" shape="-0.45,299.74 26.54,291.90 171.99,246.83 216.64,233.47 257.46,221.77 342.33,195.80 434.83,168.96 540.64,138.81">
+            <param key="origId" value="785902540"/>
+        </lane>
+    </edge>
+    <edge id="785902540#2" from="4889475255" to="1887614584" name="Mayor J.R. Borja Street" priority="12" type="highway.primary" length="100.00" shape="551.85,137.28 601.52,119.60 619.12,113.16 637.85,106.19 656.99,98.28 712.32,75.40 767.38,47.59 777.17,44.80 786.14,42.27 796.61,39.40 867.47,20.04">
+        <lane id="785902540#2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="100.00" shape="561.67,128.69 599.89,115.09 617.46,108.66 636.10,101.72 655.16,93.84 710.32,71.03 765.62,43.10 775.86,40.18 784.86,37.65 795.34,34.77 866.20,15.41">
+            <param key="origId" value="785902540"/>
+        </lane>
+        <lane id="785902540#2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="100.00" shape="562.74,131.71 600.98,118.10 618.57,111.66 637.27,104.70 656.38,96.80 711.65,73.94 766.79,46.09 776.73,43.26 785.71,40.73 796.19,37.86 867.05,18.50">
             <param key="origId" value="785902540"/>
         </lane>
     </edge>

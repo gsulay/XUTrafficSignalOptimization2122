@@ -201,7 +201,7 @@ class SumoEnvrionment:
             all_speed = np.array(all_speed)
 
             reward = all_speed.sum()/len(all_speed) #get speed from m/s to km/h
-            # print(reward)
+    
             return reward
         
         def waiting_time():

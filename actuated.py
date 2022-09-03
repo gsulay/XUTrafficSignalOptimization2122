@@ -32,5 +32,6 @@ if __name__ == '__main__':
         os.mkdir(output_path)
 
     traci.start([checkBinary('sumo-gui'), '-c', 'Simulation_Environment\Actuated\osm.sumocfg',
-    '--tripinfo-output', os.path.join(output_path,'trip-info.xml'),'--start','-a','Simulation_Environment\Actuated\osm.tlLogic.xml'])
+    '--tripinfo-output', os.path.join(output_path,'trip-info.xml'),'--start','-a','Simulation_Environment\Actuated\osm.tlLogic.xml', "--summary", r"Results\actuated.xml", "--scale", "1.0"])
+
     run()

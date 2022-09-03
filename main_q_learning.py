@@ -36,22 +36,24 @@ if __name__ == '__main__':
                 model, path = select_model()
                 epochs = int(input('How Many Epochs?:   '))
                 last_epoch = path.split(r'\\')[-1].split('epochs')[0].split('-')[-1]
+                last_epoch = int(last_epoch)
 
                 print("Model Successfuly loaded from {}\nLast Epoch: ".format(path, last_epoch))
                 print("Running SUMO...")
                 print('-------------------------------------------------------------------')
 
-                losses, epochs = dqn.train(model, last_epoch=last_epoch, epochs=epochs)
+                losses, epochs = dqn.train(model, last_epoch=last_epoch, epochs=epochs,sumocfg_path="Simulation_Environment\Main Route Simulation\osm.sumocfg" )
                 
                 print('Running Loss Graph...')
 
                 dqn.graph_losses(losses, last_epoch)
             elif run_type == 2:
                 model, path = select_model()
+                scale = float(input("Scale Factor (default is 1): "))
                 print("Model Successfuly loaded from {}".format(path))
                 print("Running SUMO...")
-                print('-------------------------------------------------------------------')
-                dqn.evaluate(model)
+                print('--------------------------------------------------------------------')
+                dqn.evaluate(model, sumocfg_path="Simulation_Environment\Main Route Simulation\osm.sumocfg", scale=scale)
             elif run_type == 0:
                 epochs = int(input('How Many Epochs?:   '))
                 print("Running SUMO...")

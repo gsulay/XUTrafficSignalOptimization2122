@@ -1,0 +1,30 @@
+<routes> 
+  <routeDistribution id="routedist1">
+      <route id="route0" edges="785902529 732022517" probability="0.125"/>
+      <route id="route1" edges="785902529 -785902540#1" probability="0.125"/>
+      <route id="route2" edges="785902540#0 732022517" probability="0.125"/>
+      <route id="route3" edges="785902540#0 785902540#2" probability="0.125"/>
+      <route id="route4" edges="-732022517 785902540#2" probability="0.125"/>
+      <route id="route5" edges="-732022517 -785902529" probability="0.125"/>
+      <route id="route6" edges="-785902540#2 -785902529" probability="0.125"/>
+      <route id="route7" edges="-785902540#2 -785902540#1" probability="0.125"/>
+  </routeDistribution>
+  <vType accel="0.8" decel="4.5" sigma="0.5" length="5.0" minGap="2.5" maxSpeed="30.0" guiShape="passenger" color="0,0,255" id="cars_SUV" />
+      <flow type="cars_SUV" id="cars_SUV" probability="0.316" begin="0" end="3600" route="routedist1"/>
+  <vType accel="1.0" decel="4.5" sigma="0.5" length="2.0" minGap="0.5" maxSpeed="30.0" guiShape="bicycle" color="255,0,0" id="motorcycles_scooters" />
+      <flow type="motorcycles_scooters" id="motorcycles_scooters" probability="0.238" begin="0" end="3600" route="routedist1"/>
+  <vType accel="1.0" decel="4.5" sigma="0.5" length="2.0" minGap="0.5" maxSpeed="30.0" guiShape="passenger/sedan" color="85,176,73" id="taxi" />
+      <flow type="taxi" id="taxi" probability="0.096" begin="0" end="3600" route="routedist1"/>
+  <vType accel="0.4" decel="2.0" sigma="0.5" length="15.0" minGap="2.5" maxSpeed="30.0" guiShape="bus" color="255,255,0" id="buses" />
+      <flow type="buses" id="buses" probability="0.001" begin="0" end="3600" route="routedist1"/>
+  <vType accel="0.8" decel="4.0" sigma="0.5" length="7.0" minGap="2.5" maxSpeed="30.0" guiShape="truck" color="93,85,192" id="smallTrucks" />
+      <flow type="smallTrucks" id="smallTrucks" probability="0.013" begin="0" end="3600" route="routedist1"/>
+  <vType accel="0.4" decel="3.0" sigma="0.5" length="12.0" minGap="2.5" maxSpeed="30.0" guiShape="truck/trailer" color="239,69,98" id="largeTrucks" />
+      <flow type="largeTrucks" id="largeTrucks" probability="0.001" begin="0" end="3600" route="routedist1"/>
+  <vType accel="3.0" decel="4.5" sigma="0.5" length="2.0" minGap="0.5" maxSpeed="15.0" guiShape="bicycle" color="30,255,0" id="bicycle_tricycle" />
+      <flow type="bicycle_tricycle" id="bicycle_tricycle" probability="0.004" begin="0" end="3600" route="routedist1"/>
+  <vType accel="0.8" decel="4.0" sigma="0.5" length="7.0" minGap="2.5" maxSpeed="30.0" guiShape="truck/semitrailer" color="120,67,96" id="jeepney" />
+      <flow type="jeepney" id="jeepney" probability="0.05" begin="0" end="3600" route="routedist1"/>
+  <vType accel="2.0" decel="4.5" sigma="0.5" length="2.0" minGap="0.5" maxSpeed="30.0" guiShape="passenger/wagon" color="138,241,117" id="motorela" />
+      <flow type="motorela" id="motorela" probability="0.281" begin="0" end="3600" route="routedist1"/>
+</routes>
